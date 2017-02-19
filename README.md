@@ -1,26 +1,15 @@
 ![](http://i.imgur.com/YiFZyuW.png)
 
-# What is Viberr?
+# What is musicIV?
 
-Viberr is an application that let's you upload, store, and play all of your music from the cloud. You can now manage and listen to your music from any device, anywhere in the world. 
+musicIV is an application that's let you listen,search songs of provided genre whose backend is designed using python/django.
 
 ![](http://i.imgur.com/9Ix2CbR.png)
 
-## How does it work?
-
-To get started, first create a new album. When adding an album cover logo, it's best to have a resolution of at least 512x512 and to use common image formats such as JPG, JPEG, or PNG.
-
-![](http://i.imgur.com/RsGZfUq.png)
-
-## Adding Songs
-
-After an album is created you will then be able to add/upload songs. Currently supported file types are WAV, MP3, and OGG.
-
-![](http://i.imgur.com/gTNrnV6.png)
 
 ## My Songs
 
-Once songs are added to an album you are then able to play, favorite, and delete them.
+Once songs are added to an album you can use the webapp in any way you want to.
 
 ![](http://i.imgur.com/ggcgbz0.png)
 
