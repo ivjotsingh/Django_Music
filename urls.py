@@ -1,22 +1,14 @@
-from django.conf.urls import url
-from . import views
 
-app_name = 'music'
+from django.conf.urls import include,url
+from django.contrib import admin
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
-    url(r'^$', views.index, name='index'),
-    url(r'^register/$', views.register, name='register'),
-    url(r'^login_user/$', views.login_user, name='login_user'),
-    url(r'^logout_user/$', views.logout_user, name='logout_user'),
-    url(r'^(?P<album_id>[0-9]+)/$', views.detail, name='detail'),
-    url(r'^(?P<song_id>[0-9]+)/favorite/$', views.favorite, name='favorite'),
-    url(r'^songs/(?P<filter_by>[a-zA_Z]+)/$', views.songs, name='songs'),
-    url(r'^albums/$', views.albums, name='albums'),
-    url(r'^punjabi/$', views.punjabi, name='punjabi'),
-    url(r'^english/$', views.english, name='english'),
-    url(r'^hindi/$', views.hindi, name='hindi'),
-    url(r'^edm/$', views.edm, name='edm'),
-    url(r'^devotional/$', views.devotional, name='devotional'),
-    url(r'^workout/$', views.workout, name='workout'),
-
+    url(r'^admin/', admin.site.urls),
+    url(r'^music/', include('music.urls')),
 ]
+
+if settings.DEBUG:
+    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
